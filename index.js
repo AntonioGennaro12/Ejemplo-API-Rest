@@ -1,7 +1,10 @@
-import express from "express"
+import express from "express";
+import cors from "cors";
+
 const app = express();
 
 app.use(express.json());
+app.use(cors()); // se deberís diseñar el control de la API con una key/contraseña, etc...
 
 app.get("/api/",(req, res)=>{
     console.log(req.query);
@@ -43,7 +46,7 @@ app.delete("/api",(req, res)=>{
 
 // http://localhost:5000/api?param=false&param2=%22otrovalor%22
 
-app.listen(5000, ()=>{
+app.listen(process.env.PORT || 5000, ()=>{
     console.log("Servidor esta activo");
 });
 
