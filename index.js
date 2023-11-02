@@ -19,7 +19,7 @@ app.get("/api/:id",(req, res)=>{
 app.post("/api",(req, res)=>{
     console.log(req.body);
     // debería crear algo en la base de datos
-    res.status(201).json(req.body.info3);
+    res.status(201).json(req.body.info1);
 })
 
 app.post("/api/:nombre",(req, res)=>{
@@ -44,13 +44,14 @@ app.delete("/api",(req, res)=>{
     });
 })
 
+// URL: desde el navegador local
 // http://localhost:5000/api?param=false&param2=%22otrovalor%22
 
 app.listen(process.env.PORT || 5000, ()=>{
-    console.log("Servidor esta activo");
+    console.log("Servidor esta activo", process.env.PORT || 5000);
 });
 
 app.use((req, res)=>{
-    res.send("<h1> ERROR: ruta no existe</h1>")
+    res.send("<h1> ERROR: es una ruta que no existe</h1>")
 }); 
 
