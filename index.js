@@ -22,7 +22,7 @@ app.post("/mi-api",(req, res)=>{
     res.status(201).json(req.body.info2);
 })
 
-app.post("/api/:nombre",(req, res)=>{
+app.post("/mi-api/:nombre",(req, res)=>{
     // crea pidiendo info en la url
     res.status(201).send(`
     <h2> ${req.params.nombre}</h2> `
