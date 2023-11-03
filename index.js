@@ -24,9 +24,7 @@ app.post("/mi-api",(req, res)=>{
 
 app.post("/mi-api/:nombre",(req, res)=>{
     // crea pidiendo info en la url
-    res.status(201).send(`
-    <h2> ${req.params.nombre}</h2> `
-    );
+    res.status(201).send(`<h2> ${req.params.nombre}</h2>`);
 })
 
 app.put("/mi-api",(req, res)=>{
