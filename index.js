@@ -32,7 +32,7 @@ app.post("/mi-api/:nombre",(req, res)=>{
 app.put("/mi-api",(req, res)=>{
     // debería crear algo en la base de datos
     res.json({
-    mensaje: "put todo OK" 
+    mensaje: "PUT todo OK" 
     });
 })
 
