@@ -39,7 +39,7 @@ app.put("/mi-api",(req, res)=>{
 app.delete("/mi-api",(req, res)=>{
     // debería crear algo en la base de datos
     res.json({
-    mensaje: "delete tooodo OK" 
+    mensaje: "DELETE tooodo OK" 
     });
 })
 
