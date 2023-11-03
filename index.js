@@ -6,17 +6,17 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // se debería diseñar el control de la API con una key/contraseña, etc...
 
-app.get("/api/",(req, res)=>{
+app.get("/mi-api/",(req, res)=>{
     console.log(req.query);
     res.send(`<h1> Hola 1 ${req.query.param2}</h1>`)
 }); 
 
-app.get("/api/:id",(req, res)=>{
+app.get("/mi-api/:id",(req, res)=>{
     console.log(req.params);
     res.send("<h1> Hola 2 </h1>")
 }); 
 
-app.post("/api",(req, res)=>{
+app.post("/mi-api",(req, res)=>{
     console.log(req.body);
     // debería crear algo en la base de datos
     res.status(201).json(req.body.info2);
@@ -29,14 +29,14 @@ app.post("/api/:nombre",(req, res)=>{
     );
 })
 
-app.put("/api",(req, res)=>{
+app.put("/mi-api",(req, res)=>{
     // debería crear algo en la base de datos
     res.json({
     mensaje: "put todo OK" 
     });
 })
 
-app.delete("/api",(req, res)=>{
+app.delete("/mi-api",(req, res)=>{
     // debería crear algo en la base de datos
     res.json({
     mensaje: "delete tooodo OK" 
