@@ -39,7 +39,7 @@ app.put("/api",(req, res)=>{
 app.delete("/api",(req, res)=>{
     // debería crear algo en la base de datos
     res.json({
-    mensaje: "delete todo OK" 
+    mensaje: "delete tooodo OK" 
     });
 })
 
