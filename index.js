@@ -4,7 +4,7 @@ import cors from "cors";
 const app = express();
 
 app.use(express.json());
-app.use(cors()); // se deberís diseñar el control de la API con una key/contraseña, etc...
+app.use(cors()); // se debería diseñar el control de la API con una key/contraseña, etc...
 
 app.get("/api/",(req, res)=>{
     console.log(req.query);
@@ -19,7 +19,7 @@ app.get("/api/:id",(req, res)=>{
 app.post("/api",(req, res)=>{
     console.log(req.body);
     // debería crear algo en la base de datos
-    res.status(201).json(req.body.info1);
+    res.status(201).json(req.body.info2);
 })
 
 app.post("/api/:nombre",(req, res)=>{
@@ -35,7 +35,6 @@ app.put("/api",(req, res)=>{
     mensaje: "put todo OK" 
     });
 })
-
 
 app.delete("/api",(req, res)=>{
     // debería crear algo en la base de datos
